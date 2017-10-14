@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css']
 })
-export class AddUserComponent {
+export class AddUserComponent implements OnInit {
 // name;
 //   update(value){
 //     this.name=value;
@@ -24,8 +24,11 @@ export class AddUserComponent {
   constructor(private UserService:UserServiceComponent, private router: Router ) {
 
   }
-  // ngOnInit() {
-  // }
+  ngOnInit() : void {
+
+  }
+
+
   addUser(){
     this.UserService.adduser(this.user)
       .subscribe(user => {

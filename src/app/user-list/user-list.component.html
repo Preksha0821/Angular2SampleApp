@@ -11,9 +11,9 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let u of user">
+  <tr *ngFor="let u of userObservable | async">
     <td><a [routerLink] = "['/users',u.id]"><img [src]="u.profilePic" class="profile-pic"></a></td>
-    <td>{{u.firstName}}{{u.lastName}}</td>
+    <td>{{u.firstName}}  {{u.lastName}}</td>
     <td>{{u.email}}</td>
     <!--<td>{{u.address.city}}</td>-->
     <td>

@@ -9,15 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 export class UserDetailComponent implements OnInit {
 user;
   constructor(private route: ActivatedRoute,private UserService:UserServiceComponent) {
+
+  }
+
+  ngOnInit() : void {
     this.route.params.subscribe(params=>{
-      UserService.getUserById(params.id)
+      this.UserService.getUserById(params.id)
         .subscribe(
           user => this.user=user
         );
     })
-  }
-
-  ngOnInit() {
   }
 
 }
