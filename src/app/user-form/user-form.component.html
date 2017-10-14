@@ -1,0 +1,25 @@
+<!--<form>
+<input type="text" placeholder="Enter your name" #myInput (keyup)="update(myInput.value)">
+ <p>{{name}}</p>
+</form>-->
+<form class="container" name="user-form">
+  <div class="form-group">
+    <label for="firstName">Firstname</label>
+    <input type="text" [(ngModel)]="user.firstName" name="firstName" class="form-control" id="firstName" placeholder="Enter firstname">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Lastname</label>
+    <input type="text"  [(ngModel)]="user.lastName" name="lastName" class="form-control" id="lastName" placeholder="Enter lastname">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email"  [(ngModel)]="user.email"  name="email" class="form-control" id="email" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label>State</label>
+    <select class="form-control" name="state" [(ngModel)]="user.state">
+      <option *ngFor="let state of states" [value]="state">{{state}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="addUser()">Submit</button>
+</form>
