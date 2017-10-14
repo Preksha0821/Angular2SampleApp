@@ -7,7 +7,6 @@ import{RouterModule, Routes, ActivatedRoute} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UserServiceComponent } from './user-service/user-service/user-service.component';
-import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AddUserComponent } from './add-user/add-user.component';
@@ -23,7 +22,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UserServiceComponent,
-    UserFormComponent,
     UserListComponent,
     UserDetailComponent,
     AddUserComponent
