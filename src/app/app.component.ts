@@ -10,6 +10,11 @@ import {UserServiceComponent} from "./user-service/user-service/user-service.com
 export class AppComponent {
 user;
 constructor(UserService:UserServiceComponent){
-  this.user=UserService.getUsers();
+UserService.getUsers()
+  .subscribe(
+    user => this.user=user,
+    error=> console.log(error)
+
+  );
 }
 }

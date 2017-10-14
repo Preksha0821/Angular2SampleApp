@@ -5,7 +5,7 @@ import { UserServiceComponent } from '../user-service/user-service/user-service.
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent {
+export class UserFormComponent implements OnInit{
 // name;
 //   update(value){
 //     this.name=value;
@@ -23,7 +23,11 @@ export class UserFormComponent {
   constructor(private UserService:UserServiceComponent ) {
 
   }
+  ngOnInit() {
+  }
   addUser(){
-    this.UserService.adduser(this.user);
+    this.UserService.adduser(this.user)
+      .subscribe(user => console.log(user));
+
   }
 }
