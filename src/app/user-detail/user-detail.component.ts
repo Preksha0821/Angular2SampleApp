@@ -12,7 +12,7 @@ user;
     this.route.params.subscribe(params=>{
       UserService.getUserById(params.id)
         .subscribe(
-          user => this.user=JSON.stringify(user)
+          user => this.user=user
         );
     })
   }

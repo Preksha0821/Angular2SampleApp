@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes,{ useHash: true }),
+    RouterModule.forRoot(appRoutes,{ useHash: false }),
   ],
   providers: [UserServiceComponent],
   bootstrap: [AppComponent]
