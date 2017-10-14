@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+.boxed{
+border: 10px solid black;
+}
+
+.bordered{
+background-color: cadetblue;
+color:#333;
+  border:1px solid black;
+  padding:10px;
+}
+
+.colored{
+color:red;
+}
