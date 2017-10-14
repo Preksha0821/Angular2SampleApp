@@ -223,6 +223,11 @@ export class UserServiceComponent implements OnInit {
   // adduser(user){
   //  this.user.unshift(user);
   // }
+  getUserById(userId):Observable<any[]>{
+    return this.http.get(`http://mocker.egen.io/users/${userId}`)
+      .map(response=>response.json())
+      .catch(error => Observable.throw(error.statusText));
+  }
  adduser(user):Observable <any[]>{
     return this.http.post('http://mocker.egen.io/users',user)
       .map(response=>response.json())

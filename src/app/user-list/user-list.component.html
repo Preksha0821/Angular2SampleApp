@@ -1,0 +1,31 @@
+<a [routerLink]="['/add-user']" class="btn btn-primary">Add User</a>
+<hr>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Profile Pic</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>State</th>
+    <th>Company</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let u of user">
+    <td><a [routerLink] = "['/users',u.id]"><img [src]="u.profilePic" class="profile-pic"></a></td>
+    <td>{{u.firstName}}{{u.lastName}}</td>
+    <td>{{u.email}}</td>
+    <!--<td>{{u.address.city}}</td>-->
+    <td>
+      <ul [ngSwitch]="u.address.state">
+        <li *ngSwitchCase="'WI'">Wisconsin</li>
+        <li *ngSwitchCase="'OH'">Ohio</li>
+        <li *ngSwitchCase="'AR'">Arizona</li>
+        <li *ngSwitchDefault>Other</li>
+      </ul>
+    </td>
+    <td>{{u.company?.name}}</td>
+  </tr>
+  </tbody>
+</table>
+

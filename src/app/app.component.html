@@ -8,31 +8,11 @@
   {{user.address.state}},{{user.address.country}}</p>
   <button (click)="handler()">Say Hello</button>
 </div>-->
-<app-user-form></app-user-form>
-<table class="table">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>State</th>
-    <th>Company</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let u of user">
-    <td>{{u.firstName}}{{u.lastName}}</td>
-    <td>{{u.email}}</td>
-    <!--<td>{{u.address.city}}</td>-->
-    <td>
-      <ul [ngSwitch]="u.address.state">
-        <li *ngSwitchCase="'WI'">Wisconsin</li>
-        <li *ngSwitchCase="'OH'">Ohio</li>
-        <li *ngSwitchCase="'AR'">Arizona</li>
-        <li *ngSwitchDefault>Other</li>
-      </ul>
-    </td>
-    <td>{{u.company?.name}}</td>
-  </tr>
-  </tbody>
-</table>
+<!--<app-user-form></app-user-form>-->
+<section class="container">
+  <header><h2>Angular Application</h2></header>
+  <hr>
+  <router-outlet></router-outlet>
+  <footer>&copy; Preksha Shah</footer>
+</section>
 
